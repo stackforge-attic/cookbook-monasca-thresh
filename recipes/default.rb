@@ -24,6 +24,7 @@ file '/etc/default/mon-thresh' do
     group 'root'
     mode 0644
     content "export LOGDIR=#{node[:mon_thresh][:log_dir]}"
+    notifies :restart, "service[mon-thresh]"
 end
 
 # todo - I need an encrypted credentials data bag

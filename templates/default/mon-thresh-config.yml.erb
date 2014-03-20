@@ -4,8 +4,6 @@ metricSpoutTasks: 1
 # log location? node['mon_thresh']['log_dir']
 
 metricSpoutConfig:
-
-  #Kafka settings.
   kafkaConsumerConfiguration:
   # See http://kafka.apache.org/documentation.html#api for semantics and defaults.
     topic: <%= @settings['kafka']['metric']['topic'] %>
@@ -33,7 +31,6 @@ metricSpoutConfig:
 
 
 eventSpoutConfig:
-  #Kafka settings.
   kafkaConsumerConfiguration:
   # See http://kafka.apache.org/documentation.html#api for semantics and defaults.
     topic: <%= @settings['kafka']['event']['consumer_topic'] %>
@@ -60,27 +57,27 @@ eventSpoutConfig:
     zookeeperSyncTimeMs: 2000
 
 
-  kafkaProducerConfiguration:
-    # See http://kafka.apache.org/documentation.html#api for semantics and defaults.
-    topic: <%= @settings['kafka']['event']['producer_topic'] %>
-    metadataBrokerList: <%= @settings['kafka']['event']['host'] %>
-    serializerClass: kafka.serializer.StringEncoder
-    partitionerClass:
-    requestRequiredAcks: 1
-    requestTimeoutMs: 10000
-    producerType: sync
-    keySerializerClass: 
-    compressionCodec: none
-    compressedTopics: 
-    messageSendMaxRetries: 3
-    retryBackoffMs: 100
-    topicMetadataRefreshIntervalMs: 600000
-    queueBufferingMaxMs: 5000
-    queueBufferingMaxMessages: 10000
-    queueEnqueueTimeoutMs: -1
-    batchNumMessages: 200
-    sendBufferBytes: 102400
-    clientId : Threshold_Engine
+kafkaProducerConfiguration:
+  # See http://kafka.apache.org/documentation.html#api for semantics and defaults.
+  topic: <%= @settings['kafka']['event']['producer_topic'] %>
+  metadataBrokerList: <%= @settings['kafka']['event']['host'] %>
+  serializerClass: kafka.serializer.StringEncoder
+  partitionerClass:
+  requestRequiredAcks: 1
+  requestTimeoutMs: 10000
+  producerType: sync
+  keySerializerClass: 
+  compressionCodec: none
+  compressedTopics: 
+  messageSendMaxRetries: 3
+  retryBackoffMs: 100
+  topicMetadataRefreshIntervalMs: 600000
+  queueBufferingMaxMs: 5000
+  queueBufferingMaxMessages: 10000
+  queueEnqueueTimeoutMs: -1
+  batchNumMessages: 200
+  sendBufferBytes: 102400
+  clientId : Threshold_Engine
 
 
 sporadicMetricNamespaces:

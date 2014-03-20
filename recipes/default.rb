@@ -17,6 +17,15 @@ directory node[:mon_thresh][:log_dir] do
     mode 0755
 end
 
+
+file '/etc/default/mon-thresh' do
+    action :create
+    owner 'root'
+    group 'root'
+    mode 0644
+    content "export LOGDIR=#{node[:mon_thresh][:log_dir]}"
+end
+
 # todo - I need an encrypted credentials data bag
 credentials = { 'mysql' => { 'user' => 'thresh', 'password' => 'password'}}
 settings = data_bag_item(node[:mon_thresh][:data_bag], 'mon_thresh')

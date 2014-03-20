@@ -57,7 +57,7 @@ eventSpoutConfig:
     zookeeperSyncTimeMs: 2000
 
 
-kafkaProducerConfiguration:
+kafkaProducerConfig:
   # See http://kafka.apache.org/documentation.html#api for semantics and defaults.
   topic: <%= @settings['kafka']['event']['producer_topic'] %>
   metadataBrokerList: <%= @settings['kafka']['event']['host'] %>

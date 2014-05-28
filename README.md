@@ -1,5 +1,6 @@
 mon_thresh Cookbook
 ===================
+This cookbook sets up a standalone mon-thresh, a cluster setup is not supported.
 
 Requirements
 ------------

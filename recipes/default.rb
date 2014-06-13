@@ -5,7 +5,6 @@ end
 
 service 'mon-thresh' do
   action :enable
-  provider Chef::Provider::Service::Upstart
 end
 
 # todo - an encrypted credentials data bag

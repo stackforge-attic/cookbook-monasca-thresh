@@ -5,29 +5,9 @@ end
 
 service 'mon-thresh' do
   action :enable
-  provider Chef::Provider::Service::Upstart
 end
 
-# Create the log file directory
-directory node[:mon_thresh][:log_dir] do
-    action :create
-    recursive true
-    owner 'thresh'
-    group 'thresh'
-    mode 0755
-end
-
-
-file '/etc/default/mon-thresh' do
-    action :create
-    owner 'root'
-    group 'root'
-    mode 0644
-    content "export LOGDIR=#{node[:mon_thresh][:log_dir]}"
-    notifies :restart, "service[mon-thresh]"
-end
-
-# todo - I need an encrypted credentials data bag
+# todo - an encrypted credentials data bag
 credentials = { 'mysql' => { 'user' => 'thresh', 'password' => 'password'}}
 settings = data_bag_item(node[:mon_thresh][:data_bag], 'mon_thresh')
 

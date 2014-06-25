@@ -1,6 +1,6 @@
 mon_thresh Cookbook
 ===================
-This cookbook sets up a standalone mon-thresh, a cluster setup is not supported.
+This cookbook sets up a mon-thresh which runs under storm. It is assumed this cookbook is installed on the storm nimbus node.
 
 Requirements
 ------------

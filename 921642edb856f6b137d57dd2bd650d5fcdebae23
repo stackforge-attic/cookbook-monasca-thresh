@@ -1,0 +1,9 @@
+Verified+2: Jenkins
+Verified+1: Wherenow.org Jenkins CI <jenkins@wherenow.org>
+Code-Review+2: Tim Kuhlman <tim.kuhlman@hp.com>
+Workflow+1: Tim Kuhlman <tim.kuhlman@hp.com>
+Submitted-by: Jenkins
+Submitted-at: Thu, 17 Jul 2014 01:39:45 +0000
+Reviewed-on: https://review.openstack.org/107181
+Project: stackforge/cookbook-monasca-thresh
+Branch: refs/heads/master

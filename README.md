@@ -1,6 +1,6 @@
-mon_thresh Cookbook
+monasca_thresh Cookbook
 ===================
-This cookbook sets up a mon-thresh which runs under storm. It is assumed this cookbook is installed on the storm nimbus node.
+This cookbook sets up a monasca-thresh which runs under storm. It is assumed this cookbook is installed on the storm nimbus node.
 
 Requirements
 ------------

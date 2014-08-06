@@ -1,7 +1,7 @@
 # encoding: UTF-8
 #
 # The user/group thresh are created by the package, as well as /etc/mon/
-package 'mon-thresh' do # The package depends on openjdk-7-jre-headless
+package 'monasca-thresh' do # The package depends on openjdk-7-jre-headless
   action :upgrade
 end
 

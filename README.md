@@ -1,6 +1,6 @@
-mon_thresh Cookbook
+monasca_thresh Cookbook
 ===================
-This cookbook sets up a mon-thresh which runs under storm. It is assumed this cookbook is installed on the storm nimbus node.
+This cookbook sets up a monasca-thresh which runs under storm. It is assumed this cookbook is installed on the storm nimbus node.
 
 Requirements
 ------------
@@ -16,16 +16,16 @@ Attributes
     <th>Default</th>
   </tr>
   <tr>
-    <td><tt>[:mon_thresh][:data_bag]</tt></td>
+    <td><tt>[:monasca_thresh][:data_bag]</tt></td>
     <td>String</td>
     <td>Data bag to use</td>
-    <td><tt>mon_thresh</tt></td>
+    <td><tt>monasca_thresh</tt></td>
   </tr>
 </table>
 
 Data Bags
 ---------
-The node[:mon_thresh][:data_bag] data bag is used for all items.
+The node[:monasca_thresh][:data_bag] data bag is used for all items.
 
 The following data bag items are used:
   - thresh - Holds basic configuration details of the threshold engine

@@ -1,3 +1,7 @@
+WARNING!!
+
+Monasca is now deployed via Ansible. This Chef cookbook project is no longer maintained and may be out of date. It will be moved to the StackForge attic soon.
+
 monasca_thresh Cookbook
 ===================
 This cookbook sets up a monasca-thresh which runs under storm. It is assumed this cookbook is installed on the storm nimbus node.
